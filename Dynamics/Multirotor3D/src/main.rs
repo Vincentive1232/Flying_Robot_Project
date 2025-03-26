@@ -1,14 +1,14 @@
 use std::error::Error;
 use std::fs::File;
 use csv::ReaderBuilder;
-use serde::Deserialize;
+// use serde::Deserialize;
 
-use nalgebra::{Quaternion, Matrix4, Matrix3, Vector3, Vector4};
+use nalgebra::{Quaternion, Vector3, Vector4};
 
 pub mod multirotor3d;
 pub mod utils;
 
-use multirotor3d::Multirotor3D;
+// use multirotor3d::Multirotor3D;
 use multirotor3d::Multirotor3DState;
 use multirotor3d::Multirotor3DAction;
 
