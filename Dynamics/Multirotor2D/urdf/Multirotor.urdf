@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<robot name="quadcopter" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- 基体定义 -->
+  <link name="base_link">
+    <inertial>
+      <mass value="0.1"/>  <!-- 无人机总质量 -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00033" ixy="0" ixz="0" iyy="0.00033" iyz="0" izz="0.00033"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.02"/>  <!-- 无人机主体是个简单的矩形 -->
+      </geometry>
+      <material name="gray">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- 定义螺旋桨 -->
+  <!-- 前右螺旋桨 -->
+  <link name="propeller_front_right">
+    <visual>
+      <origin xyz="0.05 -0.05 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.02" length="0.01"/>  <!-- 螺旋桨形状 -->
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1.0"/>
+      </material>
+    </visual>
+  </link>
+  
+  <!-- 前左螺旋桨 -->
+  <link name="propeller_front_left">
+    <visual>
+      <origin xyz="0.05 0.05 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.02" length="0.01"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- 后右螺旋桨 -->
+  <link name="propeller_back_right">
+    <visual>
+      <origin xyz="-0.05 -0.05 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.02" length="0.01"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- 后左螺旋桨 -->
+  <link name="propeller_back_left">
+    <visual>
+      <origin xyz="-0.05 0.05 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.02" length="0.01"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- 定义螺旋桨和主体的关节 -->
+  <!-- 前右螺旋桨与主体连接 -->
+  <joint name="joint_front_right" type="fixed">
+    <parent link="base_link"/>
+    <child link="propeller_front_right"/>
+    <origin xyz="0.05 -0.05 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- 前左螺旋桨与主体连接 -->
+  <joint name="joint_front_left" type="fixed">
+    <parent link="base_link"/>
+    <child link="propeller_front_left"/>
+    <origin xyz="0.05 0.05 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- 后右螺旋桨与主体连接 -->
+  <joint name="joint_back_right" type="fixed">
+    <parent link="base_link"/>
+    <child link="propeller_back_right"/>
+    <origin xyz="-0.05 -0.05 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- 后左螺旋桨与主体连接 -->
+  <joint name="joint_back_left" type="fixed">
+    <parent link="base_link"/>
+    <child link="propeller_back_left"/>
+    <origin xyz="-0.05 0.05 0" rpy="0 0 0"/>
+  </joint>
+
+</robot>
