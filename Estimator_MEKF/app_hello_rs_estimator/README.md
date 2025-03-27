@@ -2,32 +2,6 @@
 
 Rust version of Multiplicative Extended Kalman Filter, also contain the "My Lee Controller"
 
-
-## Build dependencies
-
-The prerequisite to build the rust app is to have a recent rust compiler (tested with 1.82.0) and the target for the Crazyflie CPU.
-To install the target with [rustup](https://rustup.rs):
-```
-rustup target add thumbv7em-none-eabihf
-```
-
-We need to set crazyflie-firmware as a submodule of the cf-app and change the path of ```CRAZYFILE_BASE``` in the Makefile to your own path.
-
-For example:
-```
-CRAZYFLIE_BASE := /home/vincentlee/Flying_Robot/app_hello_rs_math/crazyflie-firmware
-```
-
-Then we can first compile the submodule and then our app by using:
-```
-cd
-cd PATH_TO_APP/crazyflie-firmware
-make cf2_defconfig
-make -j$(nproc)
-cd ..
-make
-```
-
 ## Architecture
 - `src/`: Source code
   - `lib.rs`: Main function, where the controller function is called.
@@ -39,4 +13,5 @@ make
   
   
 ## TODO
-Make the functions much more compact and readable.
+- Make the functions much more compact and readable.
+- The initialization part has an unknown error which will lead to a crash of the drone.
