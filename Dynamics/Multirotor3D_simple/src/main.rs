@@ -1,7 +1,7 @@
 use std::error::Error;
 use std::fs::File;
 use csv::Writer;
-use std::io::{self, Write};
+use std::io::Write;
 use csv::ReaderBuilder;
 // use serde::Deserialize;
 
@@ -34,7 +34,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut states: Vec<Multirotor3DState> = Vec::new();
     let mut actions: Vec<Multirotor3DAction> = Vec::new();
     let mut ts: Vec<f32> = Vec::new();
-    let pi: f32 = 3.1415926;
+    // let pi: f32 = 3.1415926;
 
     for result in rdr.records() {
         let data = result?;
@@ -85,7 +85,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let kappa_tau: f32 = 1.858e-8;
     let a: f32 = 0.046/1.414; 
     // Define robot_1
-    let mut robot: Multirotor3D = Multirotor3D { 
+    let mut _robot: Multirotor3D = Multirotor3D { 
         mass: 0.034, 
         g: -9.81, 
         /*
