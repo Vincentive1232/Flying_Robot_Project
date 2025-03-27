@@ -2,7 +2,7 @@
 This repo is a primary and basic reimplementation of some of the functions in [Crazyflie-firmware](https://github.com/bitcraze/crazyflie-firmware/tree/master). 
 
 ## Project Structure
-- `Dynamics`: 2D and 3D Dynamics Simulation for Crazyflie ("+" configuration).
+- `Dynamics`: 2D and 3D Dynamics Simulation for Crazyflie ("X" configuration).
   - `Multirotor2D`: Simulation code for a 2D Multirotor model.
   - `Multirotor3D`: Simulation code for a 3D Multirotor model with Euler Integration only.
   - `Multirotor3D_simple`: Simulation code for a 3D Multirotor model with Euler Integration and RK4 Integration.
