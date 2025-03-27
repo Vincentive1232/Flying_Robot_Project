@@ -1,5 +1,5 @@
 # Flying_Robot_Project
-The repo is a primary and basic reimplementation of some of the functions in [Crazyflie-firmware](https://github.com/bitcraze/crazyflie-firmware/tree/master). 
+This repo is a primary and basic reimplementation of some of the functions in [Crazyflie-firmware](https://github.com/bitcraze/crazyflie-firmware/tree/master). 
 
 ## Project Structure
 - `Dynamics`: 2D and 3D Dynamics Simulation for Crazyflie ("+" configuration).
