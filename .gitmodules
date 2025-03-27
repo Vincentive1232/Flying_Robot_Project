@@ -1,0 +1,3 @@
+[submodule "shared/crazyflie-firmware"]
+	path = shared/crazyflie-firmware
+	url = https://github.com/Vincentive1232/crazyflie-firmware.git
