@@ -1,3 +1,0 @@
-[submodule "Geometric_Controller/app_hello_rs_math/crazyflie-firmware"]
-	path = Geometric_Controller/app_hello_rs_math/crazyflie-firmware
-	url = https://github.com/Vincentive1232/crazyflie-firmware.git
