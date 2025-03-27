@@ -13,7 +13,7 @@ This repo is a primary and basic reimplementation of some of the functions in [C
   - `autonomous_sequence_high_level.py`: Guide the real drone to follow a figure-8 trajectory with rust lee-controller.
 
 - `Estimator_MEKF`:
-  - `StateEstimation_MEKF`: Simulation code for MEKF(Multiplicative Extended Kalman Filter)
+  - `StateEstimation_MEKF`: Simulation code for MEKF (Multiplicative Extended Kalman Filter).
   - `app_hello_rs_estimator`: Reimplementation of MEKF in Rust using OutofTreeEstimator api in Crazyflie-firmware.
 
 - `Motion_Planning`:
@@ -22,6 +22,10 @@ This repo is a primary and basic reimplementation of some of the functions in [C
 
   
 ## Dependencies
+### Virtual Environment
+All of the dependencies including the [Crazyflie Client](https://github.com/bitcraze/crazyflie-clients-python) (interface for flashing and real-flight status monitoring) can be installed in an conda virtual environment and I highly recommend you to do that.
+
+
 ### Setting Up Rust
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -36,7 +40,6 @@ Then try the following command to check whether Meshcat is successfully installe
 ```
 meshcat-server --open
 ```
-
 
 ## Clone and Build
 First clone the repo and the submodules:
