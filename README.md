@@ -23,7 +23,7 @@ This repo is a primary and basic reimplementation of some of the functions in [C
   
 ## Dependencies
 ### Virtual Environment
-All of the dependencies including the [Crazyflie Client](https://github.com/bitcraze/crazyflie-clients-python) (interface for flashing and real-flight status monitoring) can be installed in an conda virtual environment and I highly recommend you to do that.
+All of the dependencies including the [Crazyflie Client](https://github.com/bitcraze/crazyflie-clients-python) (interface for flashing and real-flight status monitoring) can be installed in a conda virtual environment and I highly recommend you to do that.
 
 
 ### Setting Up Rust
