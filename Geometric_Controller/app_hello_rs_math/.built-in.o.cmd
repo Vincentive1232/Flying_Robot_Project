@@ -1,0 +1,1 @@
+cmd_/home/vincentlee/Flying_Robot/app_hello_rs_math/built-in.o :=  arm-none-eabi-gcc --specs=nosys.specs --specs=nano.specs -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -nostdlib   -Wl,--whole-archive -z noexecstack -r -o /home/vincentlee/Flying_Robot/app_hello_rs_math/built-in.o /home/vincentlee/Flying_Robot/app_hello_rs_math/app.o
