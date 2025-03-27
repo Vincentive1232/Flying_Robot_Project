@@ -1,4 +1,4 @@
-# Flying_Robot_Project
+# Flying Robot Project
 This repo is a primary and basic reimplementation of some of the functions in [Crazyflie-firmware](https://github.com/bitcraze/crazyflie-firmware/tree/master). 
 
 ## Project Structure
